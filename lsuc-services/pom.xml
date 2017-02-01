@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>ca.on.lsuc</groupId>
+		<artifactId>esb-project</artifactId>
+		<version>${lsuc.version}</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>lsuc-services</artifactId>
+	<packaging>jar</packaging>
+	<name>LSUC Services Project</name>
+	<description>Business Logic</description>
+
+	<dependencies>
+		<!--<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
+		</dependency>-->
+		
+		<!-- Modules -->
+		<dependency>
+			<groupId>ca.on.lsuc</groupId>
+			<artifactId>lsuc-jpa</artifactId>
+			<version>${lsuc.version}</version>
+		</dependency>
+		
+		<!-- Spring -->
+		<dependency>
+		    <groupId>ca.on.lsuc</groupId>
+			<artifactId>spring-dependencies</artifactId>
+		    <version>${lsuc.version}</version>
+		    <type>pom</type>
+		</dependency>
+
+
+		<!-- Testing -->
+		<dependency>
+		    <groupId>ca.on.lsuc</groupId>
+			<artifactId>testing-dependencies</artifactId>
+		    <version>${lsuc.version}</version>
+		    <type>pom</type>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Logging -->
+		<dependency>
+		    <groupId>ca.on.lsuc</groupId>
+			<artifactId>logging-dependencies</artifactId>
+		    <version>${lsuc.version}</version>
+		    <type>pom</type>
+		</dependency>
+
+	</dependencies>
+</project>

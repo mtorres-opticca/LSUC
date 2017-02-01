@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<parent>
+		<groupId>ca.on.lsuc</groupId>
+		<artifactId>esb-project</artifactId>
+		<version>${lsuc.version}</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>lsuc-rest-api</artifactId>
+	<packaging>war</packaging>
+	<name>Rest API Project</name>
+	<description>Rest API Interfaces</description>
+
+	<dependencies>
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>3.1.0</version>
+		</dependency>
+		
+		<!-- Modules -->
+		<dependency>
+			<groupId>ca.on.lsuc</groupId>
+			<artifactId>lsuc-services</artifactId>
+			<version>${lsuc.version}</version>
+		</dependency>
+
+		<!-- Spring -->
+		<dependency>
+		    <groupId>ca.on.lsuc</groupId>
+			<artifactId>spring-dependencies</artifactId>
+		    <version>${lsuc.version}</version>
+		    <type>pom</type>
+		</dependency>
+		
+		<dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-core</artifactId>
+	        <version>2.7.5</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-databind</artifactId>
+	        <version>2.7.5</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-annotations</artifactId>
+	        <version>2.7.5</version>
+	    </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <version>2.7.5</version>
+        </dependency> 
+ 
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<warName>rest-api</warName>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>
