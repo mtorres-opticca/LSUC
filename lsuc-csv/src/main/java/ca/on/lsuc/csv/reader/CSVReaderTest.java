@@ -1,12 +1,15 @@
-package ca.on.lsuc.util;
+package ca.on.lsuc.csv.reader;
 
 public class CSVReaderTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		CSVReader reader = new CSVReader();
-		reader.readCSV();
+		try {
+			reader.readCSV2();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 

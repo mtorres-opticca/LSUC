@@ -1,9 +1,15 @@
-package ca.on.lsuc.util;
+package ca.on.lsuc.csv.reader;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+
+import org.apache.camel.CamelContext;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.dataformat.bindy.csv.BindyCsvDataFormat;
+import org.apache.camel.impl.DefaultCamelContext;
+import org.apache.camel.spi.DataFormat;
 
 public class CSVReader {
 
@@ -47,5 +53,22 @@ public class CSVReader {
     	
     	return result;
     }
+    
+    public void readCSV2() throws Exception{
+    	CamelContext context = new DefaultCamelContext();
+        final DataFormat bindy = new BindyCsvDataFormat();
+        context.addRoutes(new RouteBuilder() {
+            public void configure() {
+                from("file:C:\\Users\\Opticca\\Documents\\GitHub\\LSUC").
+                unmarshal(bindy)
+                .process(new SimpleProcessor());
+            }
+        });
+        context.start();
+        Thread.sleep(10000);
+        context.stop();
+    }
+    
+    
     
 }

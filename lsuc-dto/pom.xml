@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>ca.on.lsuc</groupId>
+		<artifactId>esb-project</artifactId>
+		<version>${lsuc.version}</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>lsuc-csv</artifactId>
+	<packaging>jar</packaging>
+	<name>LSUC CSV Project</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.5</version>
+		</dependency>
+
+		<!-- MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.25</version>
+		</dependency>
+		
+		<!-- SQL Server -->
+		<dependency>
+		    <groupId>com.microsoft.sqlserver</groupId>
+		    <artifactId>mssql-jdbc</artifactId>
+		    <version>6.1.0.jre8</version>
+		</dependency>
+
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.2.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.2.1.Final</version>
+		</dependency>
+
+		<!-- Spring -->
+		<dependency>
+		    <groupId>ca.on.lsuc</groupId>
+			<artifactId>spring-dependencies</artifactId>
+		    <version>${lsuc.version}</version>
+		    <type>pom</type>
+		</dependency>
+
+
+		<!-- Testing -->
+		<dependency>
+		    <groupId>ca.on.lsuc</groupId>
+			<artifactId>testing-dependencies</artifactId>
+		    <version>${lsuc.version}</version>
+		    <type>pom</type>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.dbunit</groupId>
+			<artifactId>dbunit</artifactId>
+			<version>2.5.1</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>junit</artifactId>
+					<groupId>junit</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.github.springtestdbunit</groupId>
+			<artifactId>spring-test-dbunit</artifactId>
+			<version>1.2.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+		    <groupId>ca.on.lsuc</groupId>
+			<artifactId>logging-dependencies</artifactId>
+		    <version>${lsuc.version}</version>
+		    <type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-bindy</artifactId>
+			<version>2.18.1</version>
+		</dependency>
+	</dependencies>
+	<description>CSV Library</description>
+</project>
